@@ -57,7 +57,7 @@
 -- de todos los empleados cuyo codigo de oficina sea menor o igual 4.
  SELECT lastname, firstname, officeCode
  FROM employees
- WHERE officeCode = 4;
+ WHERE officeCode <= 4;
  
 -- 12.Dentro de la tabla customers, obtén el nombre, país y estado 
 -- de todos los clientes cuyo país sea USA y cuyo estado sea CA.
@@ -126,7 +126,7 @@
  -- resultados por apellido de forma descendente y luego por nombre de forma ascendente.
  SELECT contactLastName, contactFirstName
  FROM customers
- ORDER BY contactLastName;
+ ORDER BY contactLastName DESC, contactFirstName;
  
 -- 22. Dentro de la tabla customers, obtén el número de cliente, nombre de cliente y el límite de 
 -- crédito de los cinco clientes con el límite de crédito más alto (top 5).
