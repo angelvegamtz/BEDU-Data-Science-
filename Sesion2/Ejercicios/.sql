@@ -80,6 +80,38 @@
  GROUP BY customerNumber, checkNumber 
  LIMIT 1;
  
+-- 11.Obten el número de cliente, número de cheque y cantidad de 
+-- aquellos clientes cuyo pago es más alto que el promedio.
+ SELECT customerNumber, checkNumber, amount
+ FROM payments
+ WHERE  amount > (SELECT AVG(amount)
+ FROM payments);
+ 
+-- 12. Obten el nombre de aquellos clientes que no han hecho ninguna orden.
+ SELECT customerName, contactLastName
+ FROM customers 
+ WHERE customerNumber NOT IN
+  (SELECT customerNumber 
+   FROM orders 
+   GROUP BY customerNumber);
+ 
+ -- 13.Obten el máximo, mínimo y promedio del número de productos en las órdenes de venta.
+ DESCRIBE orderdetails;
+ SELECT MAX(totalQuantityOrdered),MIN(totalQuantityOrdered),AVG(totalQuantityOrdered) 
+ FROM (SELECT orderNumber,SUM(quantityOrdered) AS totalQuantityOrdered 
+        FROM orderdetails 
+        GROUP BY orderNumber) AS sq;
+
+-- 14. Dentro de la tabla orders, obten el número de órdenes que hay por cada estado.
+ SELECT orderNumber
+ FROM orders
+ WHERE customerNumber IN(
+ SELECT customerNumber
+ FROM customers
+ WHERE state IN(SELECT state
+  FROM customers
+  ORDER BY state));
+
  
  
 
