@@ -1,4 +1,4 @@
-Evidencias de la Sesión 6 del día martes 10 de diciembre de 2020.
+Evidencias de la Sesión 6 del día jueves 10 de diciembre de 2020.
 
 Autor: HURTADO GUTIÉRREZ MARCO ANTONIO
 

@@ -1,4 +1,4 @@
-Evidencias de la Sesión 5 del día martes 9 de diciembre de 2020.
+Evidencias de la Sesión 5 del día martes 8 de diciembre de 2020.
 
 Autor: HURTADO GUTIÉRREZ MARCO ANTONIO
 
