@@ -137,7 +137,7 @@
  
  -- 23.Dentro de la tabla customers, obtén el número de cliente, nombre de cliente 
  -- y el límite de crédito de los cinco clientes con el límite de crédito más bajo diferente de 0.
- SELECT customerNumber, customerName, creditLImit
+ SELECT customerNumber, customerName, creditLimit
  FROM customers
  WHERE creditLimit <> 0
  ORDER BY creditLimit 
