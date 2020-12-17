@@ -4,7 +4,7 @@ Autor: HURTADO GUTIÉRREZ MARCO ANTONIO
 
 Contenido:
 
-1. En Sesion6_Ejercicios.pdf (2 páginas) incluye el único reto que se dejó en clase.
+1. En Sesion7_Ejercicios.pdf (2 páginas) incluye el único reto que se dejó en clase.
 
-2. En Sesion6_Retos.pdf (2 páginas) se incluyen los retos 1,2 y 3.
+2. En Sesion7_Retos.pdf (3 páginas) se incluyen los retos 1,2 y 3.
   
