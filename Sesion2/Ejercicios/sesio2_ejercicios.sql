@@ -45,8 +45,7 @@
 -- 7. Dentro de la tabla orderdetails, obten el total de cada orden.
  
  -- La idea que yo tenía inicialmente.
- DESCRIBE orderdetails;
- SELECT orderNumber, COUNT(*) AS total_por_orden
+ SELECT orderNumber, sum(priceEach) total
  FROM orderdetails
  GROUP BY orderNumber;
  
@@ -96,21 +95,13 @@
    GROUP BY customerNumber);
  
  -- 13.Obten el máximo, mínimo y promedio del número de productos en las órdenes de venta.
- DESCRIBE orderdetails;
- SELECT MAX(totalQuantityOrdered),MIN(totalQuantityOrdered),AVG(totalQuantityOrdered) 
- FROM (SELECT orderNumber,SUM(quantityOrdered) AS totalQuantityOrdered 
-        FROM orderdetails 
-        GROUP BY orderNumber) AS sq;
+ SELECT max(quantityOrdered), min(quantityOrdered), avg(quantityOrdered)
+ FROM orderdetails;
 
 -- 14. Dentro de la tabla orders, obten el número de órdenes que hay por cada estado.
- SELECT orderNumber
+ SELECT status, count(*)
  FROM orders
- WHERE customerNumber IN(
- SELECT customerNumber
- FROM customers
- WHERE state IN(SELECT state
-  FROM customers
-  ORDER BY state));
+ GROUP BY status;
 
  
  
