@@ -41,10 +41,10 @@ division19 <- select(division19,Date, HomeTeam, AwayTeam, FTHG, FTAG,FTR)
 # data frames sean del mismo tipo. Con ayuda de la función rbind forma un único 
 # data frame que contenga las seis columnas mencionadas en el punto 3. 
 
-division17 <- mutate(division17, Date = as.Date(Date, "%Y/%m/%d"))
-division18 <- mutate(division18, Date = as.Date(Date, "%Y/%m/%d"))
-division19 <- mutate(division19, Date = as.Date(Date, "%Y/%m/%d"))
+division17 <- mutate(division17, Date = as.Date(Date, "%d/%m/%y"))
+division18 <- mutate(division18, Date = as.Date(Date, "%d/%m/%y"))
+division19 <- mutate(division19, Date = as.Date(Date, "%Y/%m/%y"))
 
-juntas17 <- rbind(data.frame(x = division17))
-juntas18 <- rbind(data.frame(x = division18))                     
-juntas19 <- rbind(data.frame(x = division19))                     
+FinalFrame <- rbind(division17,division18,division19)
+
+View(FinalFrame)
