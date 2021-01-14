@@ -43,7 +43,7 @@ division19 <- select(division19,Date, HomeTeam, AwayTeam, FTHG, FTAG,FTR)
 
 division17 <- mutate(division17, Date = as.Date(Date, "%d/%m/%y"))
 division18 <- mutate(division18, Date = as.Date(Date, "%d/%m/%y"))
-division19 <- mutate(division19, Date = as.Date(Date, "%Y/%m/%y"))
+division19 <- mutate(division19, Date = as.Date(Date, "%d/%m/%y"))
 
 FinalFrame <- rbind(division17,division18,division19)
 
